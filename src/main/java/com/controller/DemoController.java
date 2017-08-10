@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author Liukx
  * @create 2017-03-28 14:46
@@ -19,7 +21,7 @@ public class DemoController {
     private IDemoService demoService;
 
     @RequestMapping(value = "/xionggg", method = RequestMethod.GET)
-    public String t() throws Exception {
+    public String t(HttpServletRequest request) throws Exception {
         demoService.test("AAAAAAAAAAAAAAAAA");
         System.out.println("111111111111111111111");
         return "";
