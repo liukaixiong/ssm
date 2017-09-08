@@ -11,9 +11,6 @@ package com.service.demo;/**
  **/
 public interface IDemoService2 {
 
-
-    public void beidouMange() throws Exception;
-
     public void beidouQueryManage() throws Exception;
 
 }
