@@ -33,11 +33,11 @@ public class TTest {
 
      // 
      // 表字段 : t_test.test_id
-    private String test_id;
+    private String testId;
 
      // 
      // 表字段 : t_test.love_name
-    private String love_name;
+    private String loveName;
 
     /**
      * 描述 ： 
@@ -185,8 +185,8 @@ public class TTest {
      *
      * @mbg.generated
      */
-    public String getTest_id() {
-        return test_id;
+    public String getTestId() {
+        return testId;
     }
 
     /**
@@ -195,8 +195,8 @@ public class TTest {
      *
      * @mbg.generated
      */
-    public void setTest_id(String test_id) {
-        this.test_id = test_id == null ? null : test_id.trim();
+    public void setTestId(String testId) {
+        this.testId = testId == null ? null : testId.trim();
     }
 
     /**
@@ -205,8 +205,8 @@ public class TTest {
      *
      * @mbg.generated
      */
-    public String getLove_name() {
-        return love_name;
+    public String getLoveName() {
+        return loveName;
     }
 
     /**
@@ -215,7 +215,7 @@ public class TTest {
      *
      * @mbg.generated
      */
-    public void setLove_name(String love_name) {
-        this.love_name = love_name == null ? null : love_name.trim();
+    public void setLoveName(String loveName) {
+        this.loveName = loveName == null ? null : loveName.trim();
     }
 }

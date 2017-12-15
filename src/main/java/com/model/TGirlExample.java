@@ -11,8 +11,22 @@ public class TGirlExample {
 
     protected List<Criteria> oredCriteria;
 
+    private String message;
+
     public TGirlExample() {
         oredCriteria = new ArrayList<Criteria>();
+    }
+
+    public void setOredCriteria(List<Criteria> oredCriteria) {
+        this.oredCriteria = oredCriteria;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public void setOrderByClause(String orderByClause) {

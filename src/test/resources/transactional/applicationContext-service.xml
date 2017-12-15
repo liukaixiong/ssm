@@ -48,4 +48,16 @@
     <!-- 创建一个事物驱动类,用于驱动注册@Transational注解 -->
     <tx:annotation-driven transaction-manager="transactionManager"
     proxy-target-class="true"></tx:annotation-driven>
+
+
+    <!-- DAO切面类 -->
+    <bean id="logAspect" class="com.aop.LogAspect" />
+    <!-- DAO的Aop配置 -->
+    <aop:config proxy-target-class="true">
+        <aop:aspect ref="logAspect">
+            <aop:before method="before" pointcut="execution(* com.service..*.*(..))"></aop:before>
+            <aop:after-returning pointcut="execution(* com.service..*.*(..))"
+                                 arg-names="point,retValue" returning="retValue"  method="after"/>
+        </aop:aspect>
+    </aop:config>
 </beans>

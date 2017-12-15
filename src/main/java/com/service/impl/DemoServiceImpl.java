@@ -17,6 +17,10 @@ import java.util.List;
 @Service("demoService")
 public class DemoServiceImpl implements IDemoService {
 
+    public DemoServiceImpl(){
+        System.out.println("==========================");
+    }
+
     @Autowired
     private TGirlMapper girlMapper;
 

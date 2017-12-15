@@ -9,7 +9,7 @@ public class TGirl {
 
      // 
      // 表字段 : t_girl.girl_name
-    private String girl_name;
+    private String girlName;
 
      // 
      // 表字段 : t_girl.age
@@ -49,8 +49,8 @@ public class TGirl {
      *
      * @mbg.generated
      */
-    public String getGirl_name() {
-        return girl_name;
+    public String getGirlName() {
+        return girlName;
     }
 
     /**
@@ -59,8 +59,8 @@ public class TGirl {
      *
      * @mbg.generated
      */
-    public void setGirl_name(String girl_name) {
-        this.girl_name = girl_name == null ? null : girl_name.trim();
+    public void setGirlName(String girlName) {
+        this.girlName = girlName == null ? null : girlName.trim();
     }
 
     /**

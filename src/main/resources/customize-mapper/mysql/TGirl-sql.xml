@@ -3,7 +3,7 @@
 <mapper namespace="com.dao.TGirlMapper">
   <resultMap id="BaseResultMap" type="com.model.TGirl">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="girl_name" jdbcType="VARCHAR" property="girl_name" />
+    <result column="girl_name" jdbcType="VARCHAR" property="girlName" />
     <result column="age" jdbcType="INTEGER" property="age" />
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="created" jdbcType="TIMESTAMP" property="created" />
@@ -11,7 +11,7 @@
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.message.valid">
+        <if test="criteria.valid">
           <trim prefix="(" prefixOverrides="and" suffix=")">
             <foreach collection="criteria.criteria" item="criterion">
               <choose>
@@ -40,7 +40,7 @@
   <sql id="Update_By_Example_Where_Clause">
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.message.valid">
+        <if test="criteria.valid">
           <trim prefix="(" prefixOverrides="and" suffix=")">
             <foreach collection="criteria.criteria" item="criterion">
               <choose>
@@ -105,7 +105,7 @@
     </selectKey>
     insert into t_girl (girl_name, age, status, 
       created)
-    values (#{girl_name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
+    values (#{girlName,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
       #{created,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.model.TGirl">
@@ -114,7 +114,7 @@
     </selectKey>
     insert into t_girl
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="girl_name != null">
+      <if test="girlName != null">
         girl_name,
       </if>
       <if test="age != null">
@@ -128,8 +128,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="girl_name != null">
-        #{girl_name,jdbcType=VARCHAR},
+      <if test="girlName != null">
+        #{girlName,jdbcType=VARCHAR},
       </if>
       <if test="age != null">
         #{age,jdbcType=INTEGER},
@@ -154,8 +154,8 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.girl_name != null">
-        girl_name = #{record.girl_name,jdbcType=VARCHAR},
+      <if test="record.girlName != null">
+        girl_name = #{record.girlName,jdbcType=VARCHAR},
       </if>
       <if test="record.age != null">
         age = #{record.age,jdbcType=INTEGER},
@@ -174,7 +174,7 @@
   <update id="updateByExample" parameterType="map">
     update t_girl
     set id = #{record.id,jdbcType=INTEGER},
-      girl_name = #{record.girl_name,jdbcType=VARCHAR},
+      girl_name = #{record.girlName,jdbcType=VARCHAR},
       age = #{record.age,jdbcType=INTEGER},
       status = #{record.status,jdbcType=INTEGER},
       created = #{record.created,jdbcType=TIMESTAMP}
@@ -185,8 +185,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.model.TGirl">
     update t_girl
     <set>
-      <if test="girl_name != null">
-        girl_name = #{girl_name,jdbcType=VARCHAR},
+      <if test="girlName != null">
+        girl_name = #{girlName,jdbcType=VARCHAR},
       </if>
       <if test="age != null">
         age = #{age,jdbcType=INTEGER},
@@ -202,7 +202,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.model.TGirl">
     update t_girl
-    set girl_name = #{girl_name,jdbcType=VARCHAR},
+    set girl_name = #{girlName,jdbcType=VARCHAR},
       age = #{age,jdbcType=INTEGER},
       status = #{status,jdbcType=INTEGER},
       created = #{created,jdbcType=TIMESTAMP}

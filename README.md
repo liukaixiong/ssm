@@ -33,4 +33,5 @@ springmvc+Spring+Mybatis 学习参考项目
 ## 事物测试
 
 编码文件地址 : test/java/transactional/TransactionalTest
+
 配置文件地址 : test/resources/transactional

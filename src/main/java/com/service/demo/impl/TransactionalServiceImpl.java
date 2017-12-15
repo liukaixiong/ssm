@@ -28,7 +28,7 @@ public class TransactionalServiceImpl implements ITransactionalService {
         System.out.println("=====================开始处理MVP");
         TGirl girl = new TGirl();
         girl.setAge(11);
-        girl.setGirl_name("hah");
+//        girl.setGirl_name("hah");
         girl.setStatus(1);
         int insert = girlMapper.insert(girl);
         System.out.println("=====================结束处理MVP");

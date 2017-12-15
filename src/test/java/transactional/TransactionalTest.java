@@ -1,6 +1,8 @@
 package transactional;
 
 import com.service.demo.ITransactionalService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class TransactionalTest {
 
 
+//    Logger logger = LoggerFactory.getLogger(getClass());
+Log logger = LogFactory.getLog(this.getClass());
     @Autowired
     @Qualifier("transactionalService")
     private ITransactionalService transactionalService;
@@ -32,8 +36,8 @@ public class TransactionalTest {
      */
     @Test
     public void testTransactionalCommit() throws Exception {
-//        transactionalService.testTransactional();
         transactionalService.testQuery();
+        logger.debug("test---------");
     }
 
 }
