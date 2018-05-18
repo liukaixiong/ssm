@@ -19,13 +19,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
         ({"/transactional/app*.xml"})
 public class IOCTest {
 
+//    @Qualifier("demoService2")
     @Autowired
     private IDemoService demoService;
+
+
 
     @Test
     public void initIOCTest() throws Exception {
         demoService.test("aaaa");
     }
-
 
 }

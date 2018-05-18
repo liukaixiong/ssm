@@ -24,6 +24,7 @@ import java.util.List;
         ({"/transactional/app*.xml"})
 public class MybatisTest {
 
+//    @Qualifier("girlMapperImpl")
     @Autowired
     private TGirlMapper girlMapper;
 

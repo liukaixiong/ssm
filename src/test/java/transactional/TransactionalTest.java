@@ -23,8 +23,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class TransactionalTest {
 
 
-//    Logger logger = LoggerFactory.getLogger(getClass());
-Log logger = LogFactory.getLog(this.getClass());
+    //    Logger logger = LoggerFactory.getLogger(getClass());
+    Log logger = LogFactory.getLog(this.getClass());
     @Autowired
     @Qualifier("transactionalService")
     private ITransactionalService transactionalService;
@@ -37,6 +37,7 @@ Log logger = LogFactory.getLog(this.getClass());
     @Test
     public void testTransactionalCommit() throws Exception {
         transactionalService.testQuery();
+//        transactionalService.testTransactional();
         logger.debug("test---------");
     }
 
